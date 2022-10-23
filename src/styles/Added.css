@@ -1,0 +1,21 @@
+.added-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3em;
+    flex-wrap: wrap;
+    padding: 2em 0em;
+    background-color: hsla(225, 75%, 98%, 1);
+    padding:  0em .5em;
+}
+ h1 {
+    text-align: center;
+}
+.added-content {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+}

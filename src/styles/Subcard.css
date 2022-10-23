@@ -1,0 +1,25 @@
+.subcard-container {
+    background-color: white;
+    max-width: 300px;
+    width: 100%;
+    padding: 1em;
+    margin: auto;
+    border-radius: 0em 1em 1em 0em;
+    box-shadow: 0px 5px 5px #ccc;
+    border: 3px solid transparent;
+    height: fit-content;
+    cursor: pointer;
+}
+.subcard-container > div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.subcard-container svg {
+    height: 20px;
+}
+
+.subcard-stats {
+    display: flex;
+    gap: .5em;
+}

@@ -1,0 +1,55 @@
+.footer-container {
+    background-color: #06060f;
+    min-height: 200px;
+    display: flex;
+    color: hsla(360, 100%, 100%, 0.74);
+    padding: 2em;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+}
+.footer-container a {
+    color: aquamarine;
+    opacity: .7;
+}
+.footer-container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: .5em;
+   
+}
+.footer-container li a {
+    width: fit-content;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row-reverse;
+    gap: .5em;
+    text-decoration: none;
+    color: white;
+    margin-bottom: .5em;
+}
+
+.footer-container svg {
+    fill: white;
+    height: 20px;
+}
+.contact-div {
+    padding: .5em;
+    margin: 0;
+    transform: skew(-20deg);
+    background: #6052e0
+}
+
+.contact-div h3 {
+    padding: 0;
+    margin: 0;
+}

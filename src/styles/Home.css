@@ -1,0 +1,10 @@
+.home-container {
+    background-color: hsla(225, 75%, 98%, 1);
+   
+    min-height: 100vh;
+}
+
+.home-container > img {
+    margin: auto;
+    display: block;
+}

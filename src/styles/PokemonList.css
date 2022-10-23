@@ -1,0 +1,15 @@
+.pokemon-list-container {
+    margin-top: 2em;
+    background-color: transparent;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 3em;
+}
+
+@media (max-width: 475px) {
+    .pokemon-list-container {
+        padding: 1em;
+    }
+}

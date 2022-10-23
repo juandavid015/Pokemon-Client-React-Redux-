@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+.pokemon-details-container {
+    padding-top: 3em;
+    display: grid;
+    grid-template-areas: 
+    "intro intro intro intro"
+    "stats stats stats stats"
+    "info info types abilities";
+    max-width: 80%;
+    margin: auto;
+    gap: 1em;
+    background-color: hsla(225, 75%, 98%, 1);
+   
+}
+.pokemon-details-container svg {
+    height: 20px;
+}
+.pokemon-details-container > div {
+    width: 100%;
+    /* height: 100%; */
+    padding: 0 .3em;
+    
+    padding-top: 1em;
+    padding: 1em;
+    
+}
+
+.pokemon-details-intro{
+    grid-area: intro;
+    justify-self: center;
+    background-color: #6f53ac;
+    color: aliceblue;
+    border-radius: .5em !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em !important;
+
+}
+.pokemon-details-intro h1 {
+    background-color: white;
+    border-radius: .5em;
+    padding: .3em;
+    color: #082259 ;
+    border: 3px solid #082259;
+}
+.pokemon-details-image-container{
+
+    background-color: transparent;
+    max-height: 350px;
+    height: fit-content;
+   
+}
+.pokemon-details-img {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pokemon-details-info {
+    grid-area: info;
+    align-self: start;
+    justify-self: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border-top: 10px solid #082259;
+    border-top-left-radius: 20% !important; */
+}
+
+.pokemon-details-stats{
+    grid-area: stats;
+    justify-self: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    background-color: #5381ac;
+    background-color: #6f53ac;
+    color: #082259;
+    color: aliceblue;
+    height: 300px ;
+    border-radius: 0em 0em .5em .5em !important;
+   /* border-bottom: 10px solid #082259; */
+    
+}
+.pokemon-details-stats svg {
+    fill: #082259;
+}
+.pokemon-details-stats > div {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pokemon-details-stats > div h3, p {
+    display: block;
+    margin: 0;
+    
+}
+.pokemon-details-types{
+    align-self: start;
+    display: flex;
+    grid-area: types;
+    justify-self: center;
+    align-items: center;
+    gap: 1em;
+    background-color: transparent;
+}
+.pokemon-details-types img {
+    height: 40px;
+}
+
+.pokemon-details-abilities{
+    align-self: start;
+    grid-area: abilities;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: transparent;
+}
+.pokemon-details-abilities p {
+    border-bottom: 2px solid #082259;
+}
+
+@media (max-width: 680px ) {
+    .pokemon-details-container {
+        padding: 3em 0em;
+        grid-template-areas: 
+        "intro intro"
+        "stats stats"
+        "info types"
+        "info abilities"
+        ;
+    }
+    .pokemon-details-container > div {
+        padding: 0;
+    }
+
+    .pokemon-details-types{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .pokemon-details-abilities{
+        grid-area: abilities;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+    .pokemon-details-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 100%;
+    }
+    .pokemon-details-stats > div {
+        height: auto;
+    }
+   
+}
