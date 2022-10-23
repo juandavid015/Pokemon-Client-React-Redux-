@@ -1,7 +1,7 @@
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Kanit:wght@400;700;800&family=Raleway:wght@400;700;800&family=Roboto:wght@400;700&family=Secular+One&display=swap');
 .App {
-  font-family: 'Pokemon Solid', sans-serif;
+  font-family: 'Secular One', sans-serif;
   font-family: 'Almarai', sans-serif;
   font-family: 'Kanit', sans-serif;
   font-family: 'Raleway', sans-serif;
