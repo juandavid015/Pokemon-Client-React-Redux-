@@ -36,7 +36,8 @@
     background-color: #6052e0;
     background-color: transparent;
     border-radius: 150px;
-    border: 3px solid #06102d;
+    border: 3px solid #06102d, black;
+    border: 3px solid #6052e0 ;
     border-style: #6052e0;
     
 }
