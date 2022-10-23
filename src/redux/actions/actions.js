@@ -5,12 +5,13 @@ export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
 export const ADD_POKEMON = 'ADD_POKEMON';
 export const GET_POKEMON_CREATED = 'GET_POKEMON_CREATED';
 export const DELETE_POKEMON = 'DELETE_POKEMON';
+const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:3001';
 
 export const getAllPokemon = (name)=> {
     return async (dispatch) => {
 
         try {
-            const response = await fetch(name? `http://localhost:3001/pokemon?name=${name}`: "http://localhost:3001/pokemon");
+            const response = await fetch(name? `${API_ENDPOINT}/pokemon?name=${name}`: `${API_ENDPOINT}/pokemon`);
         let resJSON = await response.json();
 
         resJSON = resJSON.msg ? resJSON: resJSON.map((pokemon, i) => {
@@ -38,7 +39,7 @@ export const getAllPokemon = (name)=> {
 
 export const getAlltypes = ()=> {
     return async (dispatch) => {
-        const response = await fetch('http://localhost:3001/types');
+        const response = await fetch(`${API_ENDPOINT}/types`);
         const resJSON = await response.json();
         
         dispatch({type: GET_ALL_TYPES, payload: resJSON})
@@ -48,7 +49,7 @@ export const getAlltypes = ()=> {
 export const getAllAbilities = ()=> {
 
     return async (dispatch) => {
-        const response = await fetch('http://localhost:3001/abilities');
+        const response = await fetch(`${API_ENDPOINT}/abilities`);
         const resJSON = await response.json();
         dispatch({type: GET_ALL_ABILITIES, payload: resJSON})
     }
@@ -57,7 +58,7 @@ export const getAllAbilities = ()=> {
 export const getPokemonDetails = (id)=> {
 
     return async (dispatch) => {
-        const response = await fetch(`http://localhost:3001/pokemon/${id}`);
+        const response = await fetch(`${API_ENDPOINT}/pokemon/${id}`);
         const resJSON = await response.json();
 
         resJSON.types = resJSON.types?.map(t => {
@@ -81,13 +82,9 @@ export const createPokemon = (pokemon)=> {
              body: JSON.stringify(pokemon) 
         }
         try {
-            const response = await fetch('http://localhost:3001/pokemon', settings);
+            const response = await fetch(`${API_ENDPOINT}/pokemon`, settings);
             const resJSON = await response.json();
-            // resJSON.result[0].types = resJSON.result[0]?.types.map(t=> t.name)
-            // resJSON.result[0].abilities = resJSON.result[0]?.abilities.map(a=> a.name)
 
-            // dispatch({type: ADD_POKEMON, payload: resJSON});
-            // console.log('res', resJSON)
             return resJSON
 
         } catch(err) {
@@ -99,7 +96,7 @@ export const createPokemon = (pokemon)=> {
 export const pokemonCreated = () => {
     return async (dispatch) => {
 
-        const response = await fetch('http://localhost:3001/pokemon/?createdBy=true');
+        const response = await fetch(`${API_ENDPOINT}/pokemon/?createdBy=true`);
         const resJSON = await response.json();
         
         dispatch({type: GET_POKEMON_CREATED, payload: resJSON});
@@ -110,7 +107,7 @@ export const pokemonCreated = () => {
 export const deletePokemon = (name) => {
     return async (dispatch) => {
         
-         await fetch(`http://localhost:3001/pokemon/${name}`, { method: 'DELETE' });
+         await fetch(`${API_ENDPOINT}/pokemon/${name}`, { method: 'DELETE' });
 
         dispatch({type: DELETE_POKEMON, payload: name})
         // console.log(resJSON)
